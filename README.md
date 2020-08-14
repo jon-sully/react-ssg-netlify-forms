@@ -51,7 +51,35 @@ const IndexPage = () => {
 }
 ```
 
----
+## Install
+
+Install is straightforward as can be. Install via Yarn or NPM:
+
+Yarn: `yarn add react-netlify-form`
+
+NPM: `npm i react-netlify-form`
+
+Then import into your React code where desired (shown above): `import NetlifyForm from 'react-netlify-form'`
+
+## Usage
+
+The `<NetlifyForm>` component operates on the following premise and allows for a number of configuration options.
+
+The Component will handle all of the plumbing and leg work to make sure that your
+form data arrives to Netlify safe and sound, but it's up to you to manage the state
+of your form controls. The Component expects you to pass an object in for `formValues`
+with a flat structure, ready to be serialized. For instance:
+
+```js
+{
+  name: 'Hello there, friend!',
+  email: 'test@example.com',
+  description: 'What a beautiful day it is'
+  favoriteColor: 'red'
+}
+```
+
+This is the natural progression if using the example above where form state is managed in a single object (which also makes having a general `onChange` handler possible 😁). The key reason for this is so that you can employ your own validations and other UX flow concerns with the form data at your fingertips. This is better illustrated in a [slightly more complicated example](https://github.com/jon-fm/react-netlify-form-demo/blob/master/src/pages/medium.js).
 
   /* 
 
