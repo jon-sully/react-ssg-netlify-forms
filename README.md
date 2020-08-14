@@ -10,11 +10,15 @@ with Netlify forms without having to worry about all of the details. Manage your
 form's state however you prefer (a simple method shown below) then pass the value
 collection to the component and let it handle the rest.
 
+No need to configure anything in the Netlify UI, no need to worry about fetching
+or endpoints. It's all included.
+
 ## Example
 
 Simple form usage (https://react-netlify-form.demo.jon.fm)
 ```jsx
 import React, { useState } from "react"
+import { navigate } from 'gatsby'
 import NetlifyForm from 'react-netlify-form'
 
 const IndexPage = () => {
@@ -32,8 +36,6 @@ const IndexPage = () => {
   })
 
   return (
-    <Layout>
-
       <NetlifyForm formName="Very Simple Form" formValues={formValues} postSubmit={postSubmit} >
         <div>
           Your Name: <input type="text" name="name" value={formValues.name} onChange={handleChange} required />
@@ -45,14 +47,6 @@ const IndexPage = () => {
           <button type="submit">Send</button>
         </div>
       </NetlifyForm>
-
-      <div>
-        <Link to="/medium" >For a bit more complex form, click here</Link>
-      </div>
-      <div>
-        <a href="https://github.com/jon-fm/react-netlify-form-demo/blob/master/src/pages/index.js">To see the code, click here!</a>
-      </div>
-    </Layout>
   )
 }
 ```
