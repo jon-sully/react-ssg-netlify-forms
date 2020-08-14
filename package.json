@@ -1,6 +1,6 @@
 {
   "name": "react-ssg-netlify-forms",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A turn-key wrapper to seamlessly enable Netlify Forms in React-based SSGs (Next, Gatsby, etc..)",
   "main": "./build/index.js",
   "repository": "https://github.com/jon-fm/react-ssg-netlify-form",
