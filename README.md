@@ -19,7 +19,7 @@ Simple form usage (https://react-netlify-form.demo.jon.fm)
 ```jsx
 import React, { useState } from "react"
 import { navigate } from 'gatsby'
-import NetlifyForm from 'react-netlify-form'
+import NetlifyForm from 'react-ssg-netlify-forms'
 
 const IndexPage = () => {
 
