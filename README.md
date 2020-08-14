@@ -1,4 +1,4 @@
-# React Netlify Form
+# React SSG Netlify Form
 
 A drop-in all-in-one solution for getting Netlify Forms on React-based SSGs
 (Gatsby, Next, etc..) including automatic honeypot protection 💯📝
