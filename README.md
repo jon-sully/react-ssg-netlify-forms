@@ -90,3 +90,11 @@ This is the natural progression if using the example above where form state is m
 _A note: **preSubmit** is where you'd want to manifest any sort of form validations or checks you'd like to run. Please see [this example](https://github.com/jon-fm/react-netlify-form-demo/blob/master/src/pages/medium.js) for an idea of what that might look like_
 
 **postSubmit** - an _optional_ prop - A function that the `<NetlifyForm>` component will call _after_ submitting the form data to Netlify. This may be an Async function. This function will not receive arguments.
+
+---
+
+## Why?
+
+Well, the short of it is that Netlify Forms is awesome but can be a tad tricky for the React-based SSGs. This package aims to take as much complexity away as possible. It generates the right code at build time then augments it differently at runtime and handles the submission process to Netlify servers for you.
+
+Tl;dr: it makes life easier 🙂
