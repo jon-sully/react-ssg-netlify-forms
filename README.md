@@ -74,29 +74,19 @@ with a flat structure, ready to be serialized. For instance:
 {
   name: 'Hello there, friend!',
   email: 'test@example.com',
-  description: 'What a beautiful day it is'
+  description: 'What a beautiful day it is',
   favoriteColor: 'red'
 }
 ```
 
-This is the natural progression if using the example above where form state is managed in a single object (which also makes having a general `onChange` handler possible 😁). The key reason for this is so that you can employ your own validations and other UX flow concerns with the form data at your fingertips. This is better illustrated in a [slightly more complicated example](https://github.com/jon-fm/react-netlify-form-demo/blob/master/src/pages/medium.js).
+This is the natural progression if using the example above where form state is managed in a single object (which also makes having a generic `onChange` handler possible 😁). The key reason for this is so that you can employ your own validations and other UX flow concerns with the form data at your fingertips. This is better illustrated in a [slightly more complicated example](https://github.com/jon-fm/react-netlify-form-demo/blob/master/src/pages/medium.js).
 
-  /* 
+**formName** - a _required_ prop - You may make this whatever you'd like - this is what will show up in the Netlify UI as the 'name' label for your form. This name is also what's referenced in the Subject field of Forms notifications emails.
 
-  - Automatic Honeypot ✅
-  - Pull this form in and have a functioning, awesome Netlify form. Literally
-    no other plumbing required.
+**formValues** - a _required_ prop - This is the object that holds the form data / the values of the fields at time of submit event; described above
 
-  API: 
-    formName
-    formValues
-    
-  Optional:
-    preSubmit (async ready, return true, else no-op)
-    postSubmit (no return necessary)
-    automaticHoneypot
+**preSubmit** - an _optional_ prop - A function that the `<NetlifyForm>` component will call when the user kicks off the submit event, before the content is sent to Netlify. This function _must_ return `true` for the submit to proceed, as returning `false` (or something non-truthy) results in a short-circuit no-op for the form. This may be an Async function. It will be `await`ed before submission, but still must return something truthy. This function will not receive arguments.
 
-  */
+_A note: **preSubmit** is where you'd want to manifest any sort of form validations or checks you'd like to run. Please see [this example](https://github.com/jon-fm/react-netlify-form-demo/blob/master/src/pages/medium.js) for an idea of what that might look like_
 
-  // Complicated stuff to keep things well-hidden during runtime (and from bots)
-  // but exposed for netlify build bots
+**postSubmit** - an _optional_ prop - A function that the `<NetlifyForm>` component will call _after_ submitting the form data to Netlify. This may be an Async function. This function will not receive arguments.
