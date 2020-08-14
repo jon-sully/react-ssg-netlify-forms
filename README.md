@@ -15,7 +15,7 @@ or endpoints. It's all included.
 
 ## Example
 
-Simple form usage (https://react-netlify-form.demo.jon.fm)
+Simple form usage (https://react-ssg-netlify-forms.demo.jon.fm)
 ```jsx
 import React, { useState } from "react"
 import { navigate } from 'gatsby'
@@ -55,11 +55,11 @@ const IndexPage = () => {
 
 Install is straightforward as can be. Install via Yarn or NPM:
 
-Yarn: `yarn add react-netlify-form`
+Yarn: `yarn add react-ssg-netlify-forms`
 
-NPM: `npm i react-netlify-form`
+NPM: `npm i react-ssg-netlify-forms`
 
-Then import into your React code where desired (shown above): `import NetlifyForm from 'react-netlify-form'`
+Then import into your React code where desired (shown above): `import NetlifyForm from 'react-ssg-netlify-forms'`
 
 ## Usage
 
