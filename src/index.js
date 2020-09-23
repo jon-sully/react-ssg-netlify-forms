@@ -70,7 +70,7 @@ const NetlifyForm = ({
       : <form onSubmit={onSubmit}>
         {children}
         <p style={{ opacity: '0', position: 'absolute', top: '0', left: '0' }}>
-          <input style={{ width: '0', height: '0', zIndex: '-1' }} name="description" value={honey} onChange={(e) => setHoney(e.target.value)} />
+          <input style={{ width: '0', height: '0', zIndex: '-1' }} name="description" aria-label="description" value={honey} onChange={(e) => setHoney(e.target.value)} />
         </p>
       </form>
   )
